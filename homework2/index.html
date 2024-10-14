@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="#" target="_blank">
+            <img src="./imges/logo.svg" alt="Logo" />
+          </a>
+        </div>
+        <nav class="nav-bar">
+          <input type="checkbox" id="toggle-menu" />
+          <label for="toggle-menu" class="burger">&#9776;</label>
+          <ul>
+            <li><a href="#" target="_blank">HOME</a></li>
+            <li><a href="#" target="_blank">ABOUT US</a></li>
+            <li><a href="#" target="_blank">SERVICES</a></li>
+            <li><a href="#" target="_blank">INVEST IN CYPRUS</a></li>
+            <li><a href="#" target="_blank">MIGRATION</a></li>
+            <li><a href="#" target="_blank">CONTАCT US</a></li>
+            <li><label for="toggle-menu" class="close-btn">&times;</label></li>
+          </ul>
+        </nav>
+        <div>
+          <button>Get in touch</button>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="services">
+          <h3>INVESTMENTS</h3>
+          <h3>BUSINESS RELOCATION</h3>
+          <h3>FAMILY RELOCATION</h3>
+        </div>
+        <div class="banner-text">
+          <h2>Relocating to Cyprus</h2>
+          <h3>Seamless – Exceptional – Experience</h3>
+          <p>
+            The captivating Mediterranean island of Cyprus has become a business
+            haven with a flourishing expat community. The strategic location
+            that grants networking opportunities and the stability of being in
+            the EU offers entrepreneurs the abilities they need to thrive.
+          </p>
+        </div>
+        <div class="banner-button">
+          <button>Find out more</button>
+        </div>
+        <h3>Most popular cities</h3>
+        <div class="cities-img">
+          <div class="card">
+            <img src="./imges/offer_cities_slider1_image.svg" alt="" />
+            <h3>NICOSIA</h3>
+          </div>
+          <div class="card">
+            <img src="./imges/offer_cities_slider2_image.svg" alt="" />
+            <h3>LIMASSOL</h3>
+          </div>
+          <div class="card">
+            <img src="./imges/offer_cities_slider3_image.svg" alt="" />
+            <h3>PAPHOS</h3>
+          </div>
+          <div class="card">
+            <img src="./imges/offer_ciities_slider4_image.svg" alt="" />
+            <h3>LARNAKA</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="our-services">
+        <h2>OUR SERVICES</h2>
+        <div class="main-cards">
+          <div class="relocation-card">
+            <img
+              src="./imges/services_cards_family_relocation_image.svg"
+              alt=""
+            />
+            <h4>FAMILY RELOCATION</h4>
+            <p>
+              With strategic planning, we simplify the moving process so you and
+              your family can feel safe and confident.
+            </p>
+            <button>Find out more</button>
+          </div>
+          <div class="relocation-card">
+            <img
+              src="./imges/services_cards_business_relocation_image.svg"
+              alt=""
+            />
+            <h4>BUSINESS RELOCATION</h4>
+            <p>
+              We handle the responsibility of moving your business to Cyprus, so
+              you can focus on your business goals.
+            </p>
+            <button>Find out more</button>
+          </div>
+          <div class="relocation-card">
+            <img
+              src="./imges/services_cards_investment_schemes_image.svg"
+              alt=""
+            />
+            <h4>INVESTMENT <br />PLANS</h4>
+            <p>
+              Discover the opportunity to further enhance your business
+              ambitions, by choosing the optimal investment plan.
+            </p>
+            <button>Find out more</button>
+          </div>
+        </div>
+      </div>
+      <div class="contacts-form">
+        <h2>CONTACT US</h2>
+        <div class="contacts">
+          <div class="tel">
+            <div class="icon">
+              <img src="./imges/contact_tel_icon.svg" alt="" />
+            </div>
+            <div class="tel-link">
+              <a href="#" target="_blank">+357 9056759</a>
+            </div>
+          </div>
+          <div class="email">
+            <div class="icon">
+              <img src="./imges/contact_email_icon.svg" alt="" />
+            </div>
+            <div class="email-link">
+              <a href="#" target="_blank">contact@pamrelocation.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <h4>SEND INQUIRY</h4>
+          <div class="form-container">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+              required
+            />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your message"
+            ></textarea>
+          </div>
+          <div class="consent">
+            <label for="consent">
+              <input type="checkbox" name="consent" id="consent" required />
+              By clicking "Submit button" you accept our Terms & Conditions and
+              have read our Privacy Policy and Disclaimer
+            </label>
+          </div>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

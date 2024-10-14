@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$pamColor1: #6d31d0;
+$pamColor2: #434364;
+@mixin font1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+@mixin font2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+@mixin font3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+@mixin font4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+@mixin font5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+@mixin buttonStyle {
+  background: linear-gradient(to right, #fefc9e, #fdbfa3 79%);
+  color: #6d31d0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #53269d, #6d31d0);
+
+  nav {
+    ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      a {
+        @include font4;
+        text-decoration: none;
+        color: white;
+      }
+    }
+    #toggle-menu {
+      display: none;
+    }
+
+    .burger {
+      display: none;
+    }
+    .close-btn {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+      text-align: right;
+      padding: 10px;
+      width: 100%;
+      background-color: #333;
+    }
+  }
+
+  button {
+    @include font2;
+    @include buttonStyle;
+    font-size: 1.25rem;
+  }
+}
+.banner {
+  width: 100%;
+  background-image: url(../imges/picture_home1.svg);
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  padding: 40px;
+  gap: 30px;
+  .services {
+    @include font5;
+    color: white;
+    display: flex;
+    gap: 20px;
+    h3 {
+      padding: 5px;
+      background-color: #6e31d08d;
+      border-radius: 20px;
+    }
+  }
+  .banner-text {
+    width: 50%;
+    h2 {
+      @include font2;
+      font-size: 2rem;
+      color: white;
+      padding-bottom: 10px;
+    }
+    h3 {
+      @include font2;
+      font-size: 1.25rem;
+      color: white;
+      padding-bottom: 10px;
+    }
+    p {
+      @include font3;
+      color: white;
+    }
+  }
+  button {
+    @include font2;
+    @include buttonStyle;
+    font-size: 1.25rem;
+  }
+  h3 {
+    @include font2;
+    font-size: 1.25rem;
+    color: white;
+  }
+  .cities-img {
+    display: flex;
+    gap: 20px;
+    .card {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      h3 {
+        color: $pamColor1;
+      }
+    }
+  }
+}
+.our-services {
+  background: linear-gradient(to top, #828cde, #6d31d0);
+  padding: 20px 110px;
+  h2 {
+    @include font1;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  .main-cards {
+    display: flex;
+    gap: 20px;
+
+    .relocation-card {
+      padding: 20px;
+      color: $pamColor2;
+      background-color: white;
+      border-radius: 20px;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+      h4 {
+        @include font1;
+        font-size: 1.75rem;
+        padding: 10px;
+      }
+      p {
+        @include font3;
+        padding: 10px;
+      }
+      button {
+        @include font2;
+        @include buttonStyle;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(109, 47, 208, 0.1),
+    rgb(109, 49, 208, 0.21) 29%,
+    rgb(109, 49, 208, 0.47) 53%,
+    #6d31d0
+  );
+  padding: 20px;
+  gap: 20px;
+  h2 {
+    color: $pamColor2;
+    @include font1;
+    font-size: 2rem;
+  }
+  a {
+    @include font2;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: $pamColor1;
+  }
+  .form {
+    width: 80%;
+    background-color: #dba68eae;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    gap: 20px;
+    padding: 20px;
+    h4 {
+      @include font1;
+      font-size: 1.75rem;
+      color: $pamColor2;
+    }
+
+    .form-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+      #name {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      #email {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      #subject {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      #phone {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      #message {
+        grid-column: 1 / -1;
+        grid-row: 3;
+      }
+      input,
+      textarea {
+        padding: 20px;
+        border-radius: 20px;
+        border: none;
+      }
+    }
+    .consent {
+      width: 48%;
+    }
+    button {
+      @include font2;
+      @include buttonStyle;
+      font-size: 1.25rem;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  /*.burger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+  ul {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #333;
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+
+  #toggle-menu:checked + label + ul {
+    display: flex;
+  }
+  #toggle-menu:checked + label + ul .close-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+  }*/
+  .main-cards {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 11px;
+  }
+  .banner {
+    .services {
+      text-align: center;
+      gap: 10px;
+    }
+    .banner-text {
+      width: 100%;
+    }
+  }
+  .cities-img {
+    flex-wrap: wrap;
+  }
+  .our-services {
+    padding: 20px;
+    .main-cards {
+      width: 100%;
+    }
+  }
+  .contacts-form {
+    .form {
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}
