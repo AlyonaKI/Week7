@@ -40,8 +40,21 @@ $pamColor2: #434364;
   align-items: center;
   padding: 20px;
   background: linear-gradient(to right, #53269d, #6d31d0);
-
-  nav {
+  .burger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: white;
+    }
+  }
+  .nav-bar {
     ul {
       display: flex;
       gap: 10px;
@@ -52,29 +65,15 @@ $pamColor2: #434364;
         color: white;
       }
     }
-    #toggle-menu {
-      display: none;
-    }
-
-    .burger {
-      display: none;
-    }
-    .close-btn {
-      display: none;
-      font-size: 30px;
-      cursor: pointer;
-      color: white;
-      text-align: right;
-      padding: 10px;
-      width: 100%;
-      background-color: #333;
-    }
   }
 
   button {
     @include font2;
     @include buttonStyle;
     font-size: 1.25rem;
+  }
+  .burger-toggle {
+    display: none;
   }
 }
 .banner {
@@ -266,43 +265,32 @@ $pamColor2: #434364;
   html {
     font-size: 14px;
   }
-  /*.burger {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-  }
-  ul {
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #333;
-    padding: 20px;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
+  .header-container {
+    .nav-bar ul {
+      display: none;
+    }
+    .burger-icon {
+      display: flex;
+    }
+    .burger-toggle:checked ~ .nav-bar ul {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 60px;
+      background: #6d31d0;
+      width: 100%;
+      text-align: center;
 
-    li {
-      margin: 10px 0;
+      li {
+        padding: 10px 0;
+      }
     }
   }
-
-  #toggle-menu:checked + label + ul {
-    display: flex;
-  }
-  #toggle-menu:checked + label + ul .close-btn {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 100;
-  }*/
   .main-cards {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   html {
     font-size: 11px;
   }
@@ -333,4 +321,12 @@ $pamColor2: #434364;
       }
     }
   }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 8px;
+  }
+  /*.banner {
+    background-repeat: no-repeat;
+  }*/
 }
